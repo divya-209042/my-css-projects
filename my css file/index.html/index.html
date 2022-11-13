@@ -1,52 +1,117 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
 <head>
-<title>  css </title>
-<style>
-      .heading
-    {
-         color:blue;
-        text-align:center;
-        }
-      .content
-   {
-     text-align:right;
-      text-align:left;
-     text-align:justify;
-     
-      
-      
-       }
-
-.nav{
-background-color:blue;
-height:50px;
+  <meta charset="utf-8">
+  <title>Chrome icon using html css</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <style>* {
+    margin: 0;
+    padding: 0;
 }
-a{
-font-size:30px;
-text-decoration:none;
-text-decoration:line-through;
-text-decoration:underline;
-color:darked;
-text-transform:capitalize;
-word-spacing:20px;
-*//letter-spacing:20px;//*
+.icon-outer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
 }
-
-</style>
-<body>
-<div class="nav">
-<a href="">Home</a>
-<a href="">About</a>
-<a href="">services</a>
-<a href="">menu</a>
-<a href="">contact</a>
-
-<h1 class="heading"> Welcome to css world!!!</h1>
-<p class="content" style=color:red>Like sharks, snakes, and spiders, piranhas are widely feared. Although most people consider piranhas to be quite dangerous, they are, for the most part, entirely harmless. Piranhas rarely feed on large animals; they eat smaller fish and aquatic plants. When confronted with humans, piranhas’ first instinct is to flee, not attack. Their fear of humans makes sense. Far more piranhas are eaten by people than people are eaten by piranhas. If the fish are well-fed, they won’t bite humans. Although most people consider piranhas to be quite dangerous, they are, except in two main situations, entirely harmless. Piranhas rarely feed on large animals; they eat smaller fish and aquatic plants. When confronted with humans, piranhas’ instinct is to flee, not attack. But there are two situations in which a piranha bite is likely. The first is when a frightened piranha is lifted out of the water—for example, if it has been caught in a fishing net. The second is when the water level in pools where piranhas are living falls too low. A large number of fish may be trapped in a single pool, and if they are hungry, they may attack anything that enters the water.</p>
-
-<p class="content" style="text-indent:100px">Although most people consider piranhas to be quite dangerous, they are, for the most part, entirely harmless. Piranhas rarely feed on large animals; they eat smaller fish and aquatic plants. When confronted with humans, piranhas’ first instinct is to flee, not attack. Their fear of humans makes sense. Far more piranhas are eaten by people than people are eaten by piranhas.</p>
-
-</body>
+.logo.chrome {
+    width: 210px;
+    height: 210px;
+    border-radius: 50%;
+    z-index: 1;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    animation: spin 0.8s linear forwards;
+}
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+.logo.chrome .center-circle {
+    border-radius: 50%;
+    background: #0d6cac;
+    background: -webkit-gradient(linear, 50% 0%, 50% 100%, 
+                                color-stop(0%, #91c1e7), 
+                                color-stop(100%, #0d6cac));
+    position: absolute;
+    height: 80px;
+    width: 80px;
+    border: 8px solid #fff;
+    z-index: 10;
+}
+.part-1 {
+    background: #e93c35;
+    position: absolute;
+    top: 0;
+    left: 34px;
+    width: 200px;
+    height: 60px;
+}
+.part-1:after {
+    transform: rotate(60deg);
+    content: " ";
+    background: #e93c35;
+    position: absolute;
+    top: 0;
+    left: -91px;
+    width: 200px;
+    height: 58px;
+}
+.part-2 {
+    transform: rotate(120deg);
+    background: #fdd901;
+    position: absolute;
+    top: 131px;
+    left: 56px;
+    width: 200px;
+    height: 65px;
+}
+.part-2:after {
+    transform: rotate(60deg);
+    content: " ";
+    background: #fdd901;
+    position: absolute;
+    top: 0;
+    left: -91px;
+    width: 200px;
+    height: 58px;
+}
+.part-3 {
+    transform: rotate(-120deg);
+    background: #5bc15b;
+    position: absolute;
+    top: 88px;
+    left: -74px;
+    width: 200px;
+    height: 65px;
+}
+.part-3:after {
+    transform: rotate(60deg);
+    content: " ";
+    background: #5bc15b;
+    position: absolute;
+    top: 0;
+    left: -91px;
+    width: 200px;
+    height: 58px;
+}</style>
 </head>
+<body>
+  <div class="icon-outer">
+    <div class="logo chrome">
+      <div class="part-1"></div>
+      <div class="part-2"></div>
+      <div class="part-3"></div>
+      <div class="center-circle"></div>
+    </div>
+  </div>
+</body>
 </html>
+
